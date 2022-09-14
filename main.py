@@ -3,6 +3,7 @@ from game import Game
 from camera import Camera
 from random import randint
 from settings import camera_bordas
+
 def main():
     running = True
     playing = True
@@ -11,10 +12,8 @@ def main():
     screen = pg.display.set_mode((0, 0), pg.FULLSCREEN)
     clock = pg.time.Clock()
 
-    #camera
-    
-    
-
+    #inicia a camera    
+    camera = Camera()
 
     #implementar menus
 
@@ -25,7 +24,7 @@ def main():
         #menu inicial aqui
         while playing == True:
             #game loop aqui
-            Camera.controle_mouse(pg.sprite.Group)
+            camera.controle_mouse()
             game.run()
 
 if __name__ == "__main__":

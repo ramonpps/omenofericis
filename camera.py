@@ -27,8 +27,8 @@ class Camera(pg.sprite.Group):
         self.camera_bordas = {'esquerda': 1500,'direita': 1500,'cima': 750,'baixo': 750}
         borda_esquerda = self.camera_bordas['esquerda']
         borda_cima = self.camera_bordas['cima']
-        borda_direita = self.display.get_window_size()[0] - self.camera_bordas['direita']
-        borda_baixo = self.display.get_surface_size()[1] - self.camera_bordas['baixo'] 
+        borda_direita = self.display_surface.get_size()[0] - self.camera_bordas['direita']
+        borda_baixo = self.display_surface.get_size()[1] - self.camera_bordas['baixo'] 
 
         #verificando a posição X do mouse
         if borda_cima < mouse.y < borda_baixo:
